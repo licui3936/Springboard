@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Springboard Menu</title>
+  </head>
+  <body>
+
+   <script>
+    const LaunchRequest = 'springboard/launch-request'
+
+    const onClick = async args => {
+        await fin.InterApplicationBus.publish(LaunchRequest,
+            {
+                uuid: args,
+                name: args,
+                url: location.href.replace('springboard-menu', 'springboard-application')
+            })
+        const wnd = await fin.Window.getCurrent()
+        // wnd.hide()
+    }
+
+    const hide = async args => {
+        const wnd = await fin.Window.getCurrent()
+        wnd.hide()
+    }
+
+
+
+</script>
+    <button type="button" onclick="onClick('12345-1')" >Item 1</button>
+    <button type="button" onclick="onClick('12345-2')" >Item 2</button>
+    <button type="button" onclick="onClick('12345-3')" >Item 3</button>
+    <button type="button" onclick="onClick('12345-4')" >Item 4</button>
+    <button type="button" onclick="onClick('12345-5')" >Item 5</button>
+    <button type="button" onclick="onClick('12345-6')" >Item 6</button>
+    <button type="button" onclick="onClick('12345-7')" >Item 7</button>
+    <button type="button" onclick="onClick('12345-8')" >Item 8</button>
+    <br>
+    <button type="button" onclick="hide()" >Hide</button>
+  </body>
+</html>

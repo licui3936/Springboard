@@ -1,0 +1,44 @@
+{
+    "devtools_port": 9090,
+    "splashScreenImage": "http://localhost:3200/Springboard_SplashScreen.png",
+    "startup_app": {
+        "name": "RBC CM Springboard - Local",
+        "icon": "http://localhost:3200/AppIcon.png",
+        "description": "RBC-Springboard",
+        "url": "http://localhost:3200/springboard.html",
+        "uuid": "springboard.html",
+        "autoShow": true,
+        "alwaysOnTop": true,
+        "frame": true,
+        "maximizable": true,
+        "maxWidth": 1000,
+        "defaultWidth": 660,
+        "minWidth": 660,
+        "defaultHeight": 100,
+        "minHeight": 100,
+        "defaultCentered": true,
+        "shadow": false,
+        "saveWindowState": false,
+        "resizable": false,
+        "webSecurity": false,
+        "version": "3.75.0",
+        "permissions": {
+            "ExternalWindow": {
+              	"wrap": true
+            },
+            "System": {
+                "downloadAsset": true,
+                "getAllExternalWindows": true,
+                "launchExternalProcess": true,
+                "readRegistryValue": false,
+                "terminateExternalProcess": true
+            }
+        }
+    },
+    "runtime": {
+        "arguments": "--no-sandbox --force-device-scale-factor=1",
+        "_version": "canary",
+        "version": "canary",
+        "versionx": "10.66.41.18"
+    }
+}
